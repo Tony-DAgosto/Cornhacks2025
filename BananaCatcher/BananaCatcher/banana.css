@@ -1,0 +1,166 @@
+:root {
+    --bg: #87CEEB;
+    --panel: rgba(255, 255, 255, 0.85);
+    --accent: #ffd74a;
+}
+
+* {
+    box-sizing: border-box
+}
+
+html,
+body {
+    height: 100%
+}
+
+body {
+    margin: 0;
+    font-family: system-ui, -apple-system, Segoe UI, Roboto, 'Helvetica Neue', Arial;
+    background: var(--bg);
+    color: #222
+}
+
+.wrap {
+    max-width: 900px;
+    margin: 20px auto;
+    padding: 12px
+}
+
+.home-btn {
+    position: fixed;
+    left: 12px;
+    top: 12px;
+    text-decoration: none;
+    /* match HUD/button style */
+    background: var(--accent);
+    color: #222;
+    padding: 6px 10px;
+    border-radius: 8px;
+    font-weight: 700;
+    font-size: 14px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    line-height: 1;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.12);
+}
+
+.logo {
+    display: block;
+    margin: 8px auto 6px;
+    max-width: 260px;
+    width: 60%;
+    height: auto
+}
+
+.sr-only {
+    position: absolute !important;
+    height: 1px;
+    width: 1px;
+    overflow: hidden;
+    clip: rect(1px, 1px, 1px, 1px);
+    white-space: nowrap
+}
+
+h1 {
+    margin-top: 0
+}
+
+.hint {
+    color: #444;
+    margin: 6px 0 12px;
+    text-align: center
+}
+
+.game-area {
+    position: relative;
+    background: linear-gradient(#9fe0ff, #bff0ff);
+    /* width includes padding (box-sizing: border-box) so account for 10px padding each side */
+    width: 620px;
+    margin: 0 auto;
+    border-radius: 12px;
+    padding: 10px;
+    box-shadow: 0 6px 30px rgba(0, 0, 0, 0.08)
+}
+
+canvas {
+    display: block;
+    background: transparent;
+    border-radius: 12px
+}
+
+#hud {
+    display: flex
+}
+
+.hud {
+    display: flex;
+    gap: 12px;
+    align-items: center;
+    justify-content: center;
+    margin-top: 8px
+}
+
+/* Make info labels and the start/restart button share the same yellow accent */
+#score,
+#lives,
+#startBtn,
+.hud #difficulty {
+    background: var(--accent);
+    color: #222;
+    padding: 6px 10px;
+    border-radius: 8px;
+    font-weight: 700;
+    border: 0;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 36px;
+    /* keep uniform height */
+    line-height: 1;
+    font-size: 14px;
+    /* ensure button text matches info labels */
+}
+
+#startBtn {
+    cursor: pointer
+}
+
+.hud #difficulty.bump {
+    box-shadow: 0 0 0 6px rgba(255, 215, 0, 0.08);
+    transform: scale(1.04);
+    transition: transform 180ms
+}
+
+#resetDifficultyBtn {
+    padding: 6px 8px;
+    border-radius: 8px;
+    border: 0;
+    background: #eee;
+    cursor: pointer
+}
+
+.hud .bump {
+    box-shadow: 0 0 0 6px rgba(255, 215, 0, 0.08);
+    transform: scale(1.04);
+    transition: transform 180ms
+}
+
+.controls-note {
+    font-size: 13px;
+    color: #444;
+    text-align: center;
+    margin-top: 12px
+}
+
+@media (max-width:700px) {
+    .game-area {
+        width: 100%;
+        padding: 8px
+    }
+
+    canvas {
+        width: 100%;
+        height: auto
+    }
+}

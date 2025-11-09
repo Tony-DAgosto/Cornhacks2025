@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Banana Catcher</title>
+  <link rel="stylesheet" href="banana.css">
+</head>
+<body>
+  <main class="wrap">
+  <a class="home-btn" href="../../index.html">← Home</a>
+  <img class="logo" src="./assets/sprites/logo.png" alt="Banana Catcher">
+  <h1 class="sr-only">Banana Catcher</h1>
+    <p class="hint">Use A / D or ← / → to move the basket. Catch bananas only!</p>
+
+    <div class="game-area">
+      <canvas id="gameCanvas" width="600" height="700"></canvas>
+      <div class="hud">
+        <div id="score">Score: 0</div>
+        <div id="lives">Lives: 3</div>
+  <div id="difficulty" aria-live="polite">Difficulty: 1.00</div>
+        <button id="startBtn">Start</button>
+      </div>
+    </div>
+
+    <p class="controls-note">Catch bananas for +1. Catching other fruits loses 1 point. Missing a banana loses a life.</p>
+  </main>
+
+  <script src="banana.js"></script>
+</body>
+</html>
