@@ -1,61 +1,88 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Cornhacks Games</title>
-  <link rel="stylesheet" href="index.css">
-</head>
-<body>
-  <main class="home-wrap">
-    <header class="home-header">
-      <h1>Cornhacks Arcade</h1>
-      <p class="sub">A small collection of microgames. Click a tile to open a game.</p>
-    </header>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Cornhacks Games</title>
+    <link rel="stylesheet" href="index.css" />
+  </head>
+  <body>
+    <main class="home-wrap">
+      <header class="home-header">
+        <h1>Cornhacks Arcade</h1>
+        <p class="sub">
+          A small collection of microgames. Click a tile to open a game.
+        </p>
+      </header>
 
-    <section class="games-grid">
-  <a class="game-tile" href="FlappyBanana/flappy.html" tabindex="0" role="link" target="_self">
-        <img src="assets/sprites/logo.png" alt="Flappy Banana" onerror="this.style.display='none'">
-        <div class="tile-title">Flappy Banana</div>
-        <div class="tile-action">Play</div>
-      </a>
-      <!-- future game tiles go here -->
-    </section>
+      <section class="games-grid">
+        <a
+          class="game-tile"
+          href="FlappyBanana/flappy.html"
+          tabindex="0"
+          role="link"
+          target="_self"
+        >
+          <img
+            src="assets/sprites/logo.png"
+            alt="Flappy Banana"
+            onerror="this.style.display='none'"
+          />
+          <div class="tile-title">Flappy Banana</div>
+          <div class="tile-action">Play</div>
+        </a>
+        <a
+          class="game-tile"
+          href="Bananas%20vs.%20Monkeys/BvM.html"
+          tabindex="0"
+          role="link"
+          target="_self"
+        >
+          <img
+            src="Bananas%20vs.%20Monkeys/Banana%20Sprites/banana_icon.png"
+            alt="Bananas vs. Monkeys"
+            onerror="this.style.display='none'"
+          />
+          <div class="tile-title">Bananas vs. Monkeys</div>
+          <div class="tile-action">Play</div>
+        </a>
+        <!-- future game tiles go here -->
+      </section>
 
-    <footer class="home-footer">Built for Cornhacks 2025</footer>
-  </main>
+      <footer class="home-footer">Built for Cornhacks 2025</footer>
+    </main>
 
-  <script>
-    // Ensure clicking or pressing Enter/Space on a game tile navigates reliably to the game's page.
-    // This helps when browser/file-server quirks or CSS interfere with default anchor behavior.
-    document.addEventListener('DOMContentLoaded', function () {
-      document.querySelectorAll('.game-tile').forEach(tile => {
-        const navigate = (href) => {
-          try {
-            // use assign so history behaves normally
-            window.location.assign(href);
-          } catch (err) {
-            // fallback
-            window.location.href = href;
-          }
-        };
+    <script>
+      // Ensure clicking or pressing Enter/Space on a game tile navigates reliably to the game's page.
+      // This helps when browser/file-server quirks or CSS interfere with default anchor behavior.
+      document.addEventListener("DOMContentLoaded", function () {
+        document.querySelectorAll(".game-tile").forEach((tile) => {
+          const navigate = (href) => {
+            try {
+              // use assign so history behaves normally
+              window.location.assign(href);
+            } catch (err) {
+              // fallback
+              window.location.href = href;
+            }
+          };
 
-        tile.addEventListener('click', function (e) {
-          e.preventDefault();
-          const href = tile.getAttribute('href');
-          if (href) navigate(href);
-        });
-
-        tile.addEventListener('keydown', function (e) {
-          // support Enter and Space for keyboard users
-          if (e.key === 'Enter' || e.key === ' ') {
+          tile.addEventListener("click", function (e) {
             e.preventDefault();
-            const href = tile.getAttribute('href');
+            const href = tile.getAttribute("href");
             if (href) navigate(href);
-          }
+          });
+
+          tile.addEventListener("keydown", function (e) {
+            // support Enter and Space for keyboard users
+            if (e.key === "Enter" || e.key === " ") {
+              e.preventDefault();
+              const href = tile.getAttribute("href");
+              if (href) navigate(href);
+            }
+          });
         });
       });
-    });
-  </script>
-</body>
+    </script>
+  </body>
 </html>
