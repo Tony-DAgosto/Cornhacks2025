@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Monkey Snake</title>
+  <link rel="stylesheet" href="monkey.css">
+</head>
+<body>
+  <main class="wrap">
+    <a class="home-btn" href="../index.html">← Home</a>
+  <img class="logo" src="./assets/sprites/logo.png" alt="Monkey Snake">
+    <h1 class="sr-only">Monkey Snake</h1>
+
+    <p class="hint">Use the arrow keys to move the monkey. Eat bananas to grow your tail — don't hit the walls or your tail!</p>
+
+    <div class="game-area">
+      <canvas id="gameCanvas" width="600" height="600"></canvas>
+      <div class="hud">
+        <div id="score">Score: 0</div>
+        <button id="startBtn">Start</button>
+      </div>
+    </div>
+
+    <p class="controls-note">Bananas increase tail length. Survive as long as you can.</p>
+  </main>
+
+  <script src="monkey.js"></script>
+</body>
+</html>
