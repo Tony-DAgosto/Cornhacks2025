@@ -11,7 +11,7 @@ body {
   min-height: 100vh;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   /* Use provided cartoon-style grid image as a background for a jungle feel */
-  background-image: url("./Other Miscellaneous Sprites/jungle_background.png");
+  background-image: url("./Other%20Miscellaneous%20Sprites/jungle_background.png");
   background-size: cover;
   background-position: center;
   background-attachment: fixed;

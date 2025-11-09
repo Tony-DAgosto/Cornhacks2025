@@ -47,7 +47,7 @@ class Game {
                 // Alternate between light and dark patches
                 // If row + column is even, use light patch, if odd use dark patch
                 const isLight = (r + c) % 2 === 0;
-                cell.style.backgroundImage = `url('./Other Miscellaneous Sprites/${isLight ? 'light_patch.png' : 'dark_patch.png'}')`;
+                cell.style.backgroundImage = `url('./Other%20Miscellaneous%20Sprites/${isLight ? 'light_patch.png' : 'dark_patch.png'}')`;
                 cell.style.backgroundSize = 'cover';
                 cell.style.backgroundPosition = 'center';
                 cell.style.position = 'relative';
@@ -129,7 +129,7 @@ class Game {
             img.className = 'banana-img';
             img.alt = type.name;
             // Use the banana type's sprite so each button shows the correct image
-            img.src = `Banana Sprites/${type.sprite}`;
+            img.src = `Banana%20Sprites/${type.sprite}`;
 
             // Info (name + cost)
             const info = document.createElement('div');
@@ -191,7 +191,7 @@ class Game {
         // Create banana shooter element
         const bananaShooter = document.createElement('div');
         bananaShooter.className = 'banana-shooter';
-        bananaShooter.style.backgroundImage = `url(./Banana\\ Sprites/${this.selectedBananaType.sprite})`;
+    bananaShooter.style.backgroundImage = `url('./Banana%20Sprites/${this.selectedBananaType.sprite}')`;
         bananaShooter.style.backgroundSize = 'contain';
         bananaShooter.style.backgroundRepeat = 'no-repeat';
         bananaShooter.style.backgroundPosition = 'center';
@@ -228,7 +228,7 @@ class Game {
 
         const monkeyElement = document.createElement('div');
         monkeyElement.className = 'monkey';
-        monkeyElement.style.backgroundImage = `url(./Monkey\\ Sprites/${type.sprite})`;
+    monkeyElement.style.backgroundImage = `url('./Monkey%20Sprites/${type.sprite}')`;
         monkeyElement.style.backgroundSize = 'contain';
         monkeyElement.style.backgroundRepeat = 'no-repeat';
         monkeyElement.style.width = '100%';
@@ -474,7 +474,7 @@ class Game {
         startScreen.className = 'start-screen';
         
         // Add background image from /Other Miscellaneous Sprites/banana_monkey_background.jpg
-        startScreen.style.backgroundImage = "url('./Other\\ Miscellaneous\\ Sprites/banana_monkey_background.jpg')";
+    startScreen.style.backgroundImage = "url('./Other%20Miscellaneous%20Sprites/banana_monkey_background.jpg')";
         startScreen.style.backgroundSize = 'cover';
         startScreen.style.backgroundPosition = 'center';
         
@@ -606,7 +606,7 @@ class Game {
         
         // Add the game over image
         const gameOverImage = document.createElement('img');
-        gameOverImage.src = './Other Miscellaneous Sprites/game_over.png';
+    gameOverImage.src = './Other%20Miscellaneous%20Sprites/game_over.png';
         gameOverImage.className = 'game-over-image';
         
         // Add restart button below the image
@@ -652,7 +652,7 @@ class Game {
 
         const coinElement = document.createElement('div');
         coinElement.className = 'coin';
-        coinElement.style.backgroundImage = 'url("Other Miscellaneous Sprites/banana_coin.png")';
+    coinElement.style.backgroundImage = 'url("Other%20Miscellaneous%20Sprites/banana_coin.png")';
         coinElement.style.backgroundSize = 'contain';
         coinElement.style.backgroundRepeat = 'no-repeat';
         coinElement.style.width = coinSize + 'px';
@@ -731,16 +731,16 @@ class Game {
 
         // Choose projectile image based on banana type
         if (banana.type.type === 'frozen') {
-            projectile.style.backgroundImage = `url('./Other Miscellaneous Sprites/frozen_projectile.png')`;
+            projectile.style.backgroundImage = `url('./Other%20Miscellaneous%20Sprites/frozen_projectile.png')`;
         } else if (banana.type.type === 'rotten') {
             // Rotten uses its own projectile image
-            projectile.style.backgroundImage = `url('./Other Miscellaneous Sprites/rotten_projectile.png')`;
+            projectile.style.backgroundImage = `url('./Other%20Miscellaneous%20Sprites/rotten_projectile.png')`;
             // slightly smaller visual for rotten projectile
             projectile.style.width = (size * 0.75) + 'px';
             projectile.style.height = (size * 0.75) + 'px';
         } else {
             // regular and triple use banana projectile image (use banana_shooter sprite as projectile)
-            projectile.style.backgroundImage = `url('./Other Miscellaneous Sprites/banana_projectile.png')`;
+            projectile.style.backgroundImage = `url('./Other%20Miscellaneous%20Sprites/banana_projectile.png')`;
             projectile.style.width = (size * 0.8) + 'px';
             projectile.style.height = (size * 0.8) + 'px';
         }
