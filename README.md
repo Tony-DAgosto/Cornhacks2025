@@ -150,7 +150,6 @@ A 2D platformer adventure starring a ninja banana!
 
 - Navigate through platforming challenges
 - Collect banana coins for points
-- Use checkpoints to save your progress
 - Reach the green goal platform to win
 - You have 3 lives to complete the level
 
@@ -163,7 +162,7 @@ A 2D platformer adventure starring a ninja banana!
 **Tips:**
 
 - Take your time - rushing leads to mistakes
-- Use checkpoints strategically
+- Collect Bonus Lives Throughout
 - Practice your jump timing for tricky sections
 - Watch out for obstacles near landing zones
 
