@@ -906,7 +906,7 @@ function updatePlayerNameDisplay() {
 // Leaderboard Management Functions
 function addScoreToLeaderboard(playerName, completionTime, totalCoins) {
     // Check if this is an ultimate ninja achievement
-    const isUltimateNinja = completionTime < 180 && totalCoins >= 150;
+    const isUltimateNinja = completionTime < 180 && totalCoins >= 125;
     
     // Add to best time leaderboard
     leaderboardData.bestTime.push({
@@ -1128,7 +1128,7 @@ function showLifeGainedPopup() {
 
 function checkUltimateAchievement() {
     const completedInUnder3Minutes = totalGameTime < 180; // 3 minutes = 180 seconds
-    const collectedOver100Coins = player.score >= 150; // 150 coins = 150 points
+    const collectedOver100Coins = player.score >= 125; // 125 coins = 125 points
     
     if (completedInUnder3Minutes && collectedOver100Coins) {
         // Unlock hidden levels and show achievement message
@@ -1139,7 +1139,7 @@ function checkUltimateAchievement() {
         achievementMsg.id = 'ultimateAchievement';
         achievementMsg.innerHTML = `
             <h2>🏆 ULTIMATE BANANA-RAMA NINJA! 🏆</h2>
-            <p>Incredible! You've completed all levels in under 3 minutes with over 150 coins!</p>
+            <p>Incredible! You've completed all levels in under 3 minutes with over 125 coins!</p>
             <p>A surprise is waiting for you in the level select menu...</p>
         `;
         achievementMsg.style.cssText = `
